@@ -10,7 +10,7 @@ export default function Congrats(props) {
   if(props.success){
     return (
       <div data-test="congrats">
-        <span data-test="message">
+        <span data-test="message" className="alert alert-success">
           Congratulations! your guessed the word!
         </span>
       </div>
