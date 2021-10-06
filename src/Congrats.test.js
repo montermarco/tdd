@@ -1,10 +1,7 @@
 import React from 'react'
-import { configure ,shallow } from 'enzyme';
-import Adapter from "@wojtekmaj/enzyme-adapter-react-17";
+import { shallow } from 'enzyme';
 import {findByAtrr, checkProps} from '../test/testUtils';
 import Congrats from './Congrats';
-
-configure({ adapter: new Adapter() });
 
 // be careful where else this prop is used ...
 const defaultProps = {success: false};
