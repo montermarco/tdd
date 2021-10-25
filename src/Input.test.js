@@ -86,3 +86,11 @@ describe('state controlled input field', () => {
     expect(mockSetCurrentGuess).toHaveBeenCalledWith('');
   });
 });
+
+/** Mock entire module for destructuring (put at the top)
+    let mockSetCurrentGuess= jest.fn();
+    jest.mock( () => ({
+      ...jest.requireActual('react'),
+      useState: (initialState) => [initialState, mockSetCurrentGuess]
+    }))
+ */
