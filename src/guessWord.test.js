@@ -48,7 +48,7 @@ describe.skip('Some words guessed', () => {
     wrapper = setup({
       secretWord: 'techno',
       success: false,
-      guessedWords: [{guessedWord: 'house', letterMatchCount: 1}]
+      guessedWords: [{guessedWord: 'house', letterMatchCount: 1}] // initial state
     });
   });
   test('creates GuessedWord table with one row', () => {

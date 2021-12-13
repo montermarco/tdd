@@ -4,12 +4,12 @@ import {findByAtrr, checkProps} from '../test/testUtils';
 import GuessedWords from './GuessedWords';
 
 const defautlProps = {
-  guessedWords: [{guessedWord: 'test', letterMatchCount: 3}],
+  guessedWords: [{guessedWord: 'train', letterMatchCount: 3}],
 };
 
 const setup = (props={}) => {
   const setUpProps = {...defautlProps, ...props};
-  return shallow(<GuessedWords {...setUpProps}/>)
+  return shallow(<GuessedWords {...setUpProps}/>);
 };
 
 test('Does not throw warning with expected props', () => {
@@ -19,6 +19,7 @@ test('Does not throw warning with expected props', () => {
 describe('If there are no words guessed', () => {
   let wrapper;
   beforeEach( () => {
+    // overweiting default props
     wrapper = setup({guessedWords: []});
   });
   test('renders without error', () => {
